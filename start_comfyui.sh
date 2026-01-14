@@ -1,5 +1,9 @@
 #!/bin/bash
 
-python3 -m venv venv
 source venv/bin/activate
-python main.py --listen --highvram
+
+# high VRAM
+# python main.py --listen --lowvram
+
+# low VRAM
+python main.py --listen --lowvram --force-fp8 --fp8-e4m3fn-text-enc --reserve-vram 0.5
